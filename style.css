@@ -1,0 +1,76 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: url("../fireflies/image.jpg");
+    background-size: cover;
+}
+ul {
+    list-style: none;
+}
+button {
+    outline: none;
+    border: none;
+}
+.firefly {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    border-radius: 40px;
+    opacity: .88;
+    cursor: pointer;
+    transition: 1s;
+}
+.firefly:hover .lightning{
+    box-shadow: 0 0 10px #831f44;
+}
+
+.firefly p {
+    line-height: 60px;
+    font-size: 22px;
+    color: #6644e2;
+}
+
+.lightning {
+    width: 96%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    border-radius: 40px;
+    transition: .8s;
+    overflow: hidden;
+}
+
+.lightning ul {
+    opacity: 0;
+    transition: .8s;
+}
+.firefly:hover ul {
+    opacity: .8;
+}
+.lightning ul li {
+    width: 5px;
+    height: 5px;
+    background-color: #ff8177;
+    position: absolute;
+    bottom: 10%;
+    border-radius: 50%;
+    opacity: .6;
+    animation: fireflymove infinite linear;
+}
+
+@keyframes fireflymove {
+    100% {
+        bottom: 100%;
+    }
+}
